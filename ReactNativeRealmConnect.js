@@ -155,7 +155,7 @@ export default function connectToQuery(queries, shouldComponentUpdate = null) {
        * @param {Object} prevResults
        */
       removeListeners(prevResults = this.results) {
-        Object.entries(prevResults).map(([key, results]) => if(results && key) results.removeListener(this.listeners[key]));
+        Object.entries(prevResults).map(([key, results]) => {if(results && key) results.removeListener(this.listeners[key])});
       }
 
       /**
